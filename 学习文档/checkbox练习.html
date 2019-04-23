@@ -1,0 +1,40 @@
+<!Doctype html>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>checkbox练习</title>
+        <script src="js/jquery.js"></script>
+    </head>
+    <body>
+    <div>
+        <label><input type="checkbox" name="checkall">checkall</label>
+        <br/><br/>
+        <label><input type="checkbox" name="checkbox" value="Bike">I have a bike</label>
+        <br>
+        <label><input type="checkbox" name="checkbox" value="Car">I have a car</label>
+        <br>
+    </body>
+    <footer>
+        <script type="text/javascript">
+            $('input[name="checkall"]').click(function() {
+                if ($(this).is(':checked')) {
+                    $('input[name="checkbox"]').each(function() {
+                        $(this).prop("checked", true);
+                    });
+                } else {
+                    $('input[name="checkbox"]').each(function() {
+                        $(this).prop("checked", false);
+                    });
+                }
+            });
+            $('input[name="checkbox"]').click(function() {
+                if (($('input[name="checkbox"]:checked').length) <= 1) {
+                    $('input[name="checkall"]').prop("checked", false);
+                } else {
+                    $('input[name="checkall"]').prop("checked", true);
+                }
+            });
+        </script>
+    </footer>
+</html>

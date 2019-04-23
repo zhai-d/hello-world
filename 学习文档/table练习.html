@@ -1,0 +1,49 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>table练习</title>
+        <script src="js/jquery.js"></script>
+    </head>
+    <body>
+        <table border="1" id="test">
+            <tr id="firstRow">
+                <td>row 1, cell 1</td>
+                <td>row 1, cell 2</td>
+            </tr>
+            <tr id="secondRow">
+                <td>row 2, cell 1</td>
+                <td>row 2, cell 2</td>
+            </tr>
+            <tr>
+                <td>row 3, cell 1</td>
+                <td>row 3, cell 2</td>
+            </tr>
+        </table><br/><br/>
+        <button type="button" id="btn1">添加一行</button>
+        <button type="button" id="btn2">删除第三行</button>
+        <br/>
+        <button type="button" id="btn3">第二行后面添加一行</button>
+        <button type="button" id="btn4">改变第一行的文字</button>
+    </body>
+    <footer>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#btn1").click(function() {
+                    $("#test").append('<tr><td>row x, cell 1</td><td>row x, cell 2</td></tr>');
+                });
+                $("#btn2").click(function() {
+                    var thirdRow = $("#test").find("tr").eq(2)
+                    $(thirdRow).remove();
+                });
+                $("#btn3").click(function() {
+                    $('<tr><td>row y, cell 1</td><td>row y, cell 2</td></tr>').insertAfter("#secondRow");
+                });
+                $("#btn4").click(function() {
+                    $('<tr><td>row a, cell 1</td><td>row a, cell 2</td></tr>').replaceAll("#firstRow");
+                });
+            });
+        </script>
+    </footer>
+</html>

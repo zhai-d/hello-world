@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-Type" content="text/html,charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Web practice three(second)</title>
+        <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+        <script src="js/jquery.js"></script>
+    </head>
+    <body class="bodySecond">
+        <form action="test.php" method="post">
+            <ul>
+                <li class="liLeft"><a class="a" href="home.html">Home</a></li>
+                <li><a class="a" href="journal.html">Journal</a></li>
+                <li><a class="a">About</a></li>
+                <li><a class="a">Contact</a></li>
+                <li class="liRight"><a class="a">Dropdown</a></li>
+            </ul>
+            <div class="formInnerPageOutside" >
+                <div class="formPageTwoInside">
+                    <textarea class="textareaHeading" placeholder="请输入标题" name="title"></textarea>
+                    <!-- 日志标题板块 -->
+                    <p class="pJournal" id="title">请输入标题</p>
+                    <p class="pHomeTop">天气:
+                        <input type="radio" name="radioWeather" value="sunny">sunny
+                        <input type="radio" name="radioWeather" value="cloudy">cloudy
+                    </p>
+                    <p class="pJournal" id="weather">请选择天气</p><hr><br/>
+                    <!-- radio 天气板块 -->
+                    <textarea class="textareaContent" placeholder="请输入内容" name="content"></textarea><br/><br/>
+                    <!-- 日志内容板块 -->
+                    <p class="pJournal" id="content">请输入内容</p><br/>
+                    <input type="date" name="dateWrite"><br/><br/>
+                    <!-- 时间板块 -->
+                    <p class="pJournal" id="createDate">请选择时间</p>
+                    <select class="select" name="selectList" id="selectList">
+                        <option value=""></option>
+                        <option value="个人日志">个人日志</option>
+                        <option value="旅游日志">旅游日志</option>
+                        <option value="奇闻轶事">奇闻轶事</option>
+                    </select><br/><br/>
+                    <p class="pJournal" id="blogType">请选择日志类型</p>
+                    <!-- 日志类型板块 -->
+                    <input type="submit" class="buttonJournal" value="保存">
+                </div>
+            </div>
+        </form>
+    </body>
+    <footer>
+        <script type="text/javascript">
+            $("input[type=button]").on('click',function() {
+                var weather = $("input[name='radioWeather']:checked").val();
+                console.log(weather);
+                var createDate = $("input[type='date']").val();
+                console.log(createDate);
+                var blogType = $("#selectList option:selected").val();
+                console.log(blogType);
+                var title = $("textarea.textareaHeading").val();
+                console.log(title);
+                var content = $("textarea.textareaContent").val();
+                console.log(content);
+                if (title.length == 0) {
+                    $("#title").css("display", "block");
+                } else {
+                    $("#title").css("display", "none");
+                }
+                if (weather == undefined) {
+                    $("#weather").css("display", "block");
+                } else {
+                    $("#weather").css("display", "none");
+                }
+                if (content.length == 0) {
+                    $("#content").css("display", "block");
+                } else {
+                    $("#content").css("display", "none");
+                }
+                if (createDate == "") {
+                    $("#createDate").css("display", "block");
+                } else {
+                    $("#createDate").css("display", "none");
+                }
+                if (blogType == "") {
+                    $("#blogType").css("display", "block");
+                } else {
+                    $("#blogType").css("display", "none");
+                }
+                if (weather != "" && createDate != "" && blogType != "" && title.length != 0 && content.length != 0) {
+                    window.location.href = "complete.html";
+                    } else {
+                        return false;
+                }
+            });
+        </script>
+    </footer>
+</html>

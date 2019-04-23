@@ -1,0 +1,165 @@
+.body{
+    width: 100%;
+    height: 800px;
+    margin: 0 auto;
+    background-color: white;
+}
+.bodySecond{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: white;
+    background-image: url(../img/journal_background.jpg);
+}
+.formHomeBig{
+    width: 100%;
+    padding: 0% 0px;
+    background-color: white;
+}
+.formHomeTop{
+    width: 60%;
+    margin: 2% 17% 0% 17%;
+    padding: 30px 3%;
+    background-color: #F7F7F7;
+}
+.formHomeSmallF{
+    float: left;
+    width: 20%;
+    background-color: white;
+    padding-bottom: 3%;
+    padding-right: 3%;
+    margin-left:17%;
+}
+.formHomeSmallS{
+    float: left;
+    width: 20%;
+    background-color: white;
+    padding-bottom: 3%;
+    padding-right: 3%;
+}
+.formHomeSmallT{
+    float: left;
+    width: 20%;
+    background-color: white;
+    padding-bottom: 3%;
+    margin-right: 17%;
+}
+.formHomeBottom{
+    width: 100%;
+    padding: 1% 0px;
+    background-color: white;
+    text-align: center;
+}
+.formInnerPageOutside{
+    width: 40%;
+    height: 100%;
+    margin: 6% auto 5% auto;
+    background-color:#F7F7F7;
+}
+.formPageTwoInside{
+    padding:0% 5%;
+    width: 90%;
+    background-color: #fdfcf8;
+}
+.formPageThreeInside{
+    padding: 3% 0%;
+    width: 100%;
+    background-color: #fdfcf8;
+}
+.select{
+    height: 25px;
+}
+ul{
+    border: 1px solid #000;
+    width: 100%;
+    height: 6%;
+    padding: 0px;
+    margin: 0 auto;
+    background-color: #2f4f4f;
+}
+li{
+    float: left;
+    width: 6%;
+    list-style-type: none;
+    background-color: #2f4f4f;
+}
+.liLeft{
+    float: left;
+    width: 6%;
+    list-style-type: none;
+    background-color: #2f4f4f;
+    padding-left: 8%;
+}
+.liRight{
+    float: left;
+    width: 6%;
+    list-style-type: none;
+    background-color: #2f4f4f;
+    padding-right:62%;
+}
+a{
+    display: block;
+    margin: 0px 0px;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+}
+a:hover{
+    background-color: #2f6f4f;
+}
+.button{
+    background-color: #87CEFA;
+    font-size: 20px;
+}
+.buttonHome{
+    background-color: #CCCCFF;
+    font-size: 20px;
+}
+.buttonJournal{
+    margin: 0 auto 7% auto;
+    width: 50px;
+    display: block;
+}
+.hHomeTop{
+    font-size: 50px;
+}
+.hHomeSmall{
+    font-size: 35px;
+}
+.hComplete{
+    font-size: 35px;
+    text-align: center;
+    margin: 40% 0% 40% 0%;
+}
+.pHomeTop{
+    font-size: 20px;
+}
+.pHomeBottom{
+    font-size: 20px;
+    text-align: center;
+}
+.pHomeSmallMiddle{
+    font-size: 20px;
+    color: yellow;
+}
+.pHomeSmallRight{
+    font-size: 20px;
+    color: green;
+}
+.pJournal{
+    color: red;
+    margin: 1% 0%;
+    display: none;
+}
+.textareaHeading{
+    width: 100%;
+    height:35px;
+    text-align:center;
+    margin-top: 50px;
+}
+.textareaContent{
+    width: 100%;height:400px;text-align:left;
+    text-indent: 2em;
+}
